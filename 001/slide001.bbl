@@ -1,0 +1,18 @@
+\begin{thebibliography}{1}
+
+\bibitem{mozilla2018}
+Dietrich Ayala.
+\newblock Introducing the dweb, 2018.
+\newblock [Online; accessed on 13-July-2023].
+
+\bibitem{bernerslee2017}
+Tim Berners-Lee.
+\newblock The system is failing, 2017.
+\newblock [Online; accessed on 13-July-2023].
+
+\bibitem{lamport1978}
+Leslie Lamport.
+\newblock Time, clocks, and the ordering of events in a distributed system.
+\newblock {\em Communications of the ACM}, 21(7):558--565, 1978.
+
+\end{thebibliography}

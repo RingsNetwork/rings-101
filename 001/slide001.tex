@@ -1,0 +1,140 @@
+\input{../_temp/temp.tex}
+
+%% preamble
+\title[Rings 101]{Rings 101 - What is Distributed Network}
+% \subtitle{The subtitle}
+
+\author[Rings Dev]{
+  \includegraphics[height=2cm]{../_temp/rings_rust.png}
+  \\
+  Rings Dev
+}
+
+\begin{document}
+
+%% title frame
+\begin{frame}
+    \titlepage
+\end{frame}
+
+\begin{frame}
+  \frametitle{ What is Distributed Network }
+  \begin{itemize}
+  \item{ Definition: What is distributed system (1min) }
+  \item{ Definition: What is a distributed Network (1min) }
+  \item{ Is internet distributed? (1min) }
+  \item{ Intoduce to dWeb (1min) }
+  \item{ Implementation of dWeb (1min) }
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{ Definition: What is distributed system }
+  \textbf{
+  \LARGE
+  A system is distributed if the message transmission delay is not negligible compared to the time between events in a single process. \cite{lamport1978}
+  \begin{flushright}
+   --- Leslie Lamport, 1978
+  \end{flushright}
+  }
+  \note {
+  In 1978, Leslie Lamport proposed this definition and made significant contributions to the field of distributed systems, for which he was awarded the Turing Award.
+  }
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Leslie Lamport at 1978 }
+  \begin{figure}[h]
+  \centering
+  \includegraphics[height=0.4\linewidth]{lamport.png}
+  \includegraphics[width=0.5\linewidth]{lamport_paper.png}
+  \end{figure}
+
+  \note {
+  In his classic paper titled "Time, Clocks, and the Ordering of Events in a Distributed System,"
+  Lamport provided a description of distributed networks and introduced the "Lamport timestamp"
+  as a mechanism for ordering events.
+  In essence, Lamport invented logical time for the distributed world.
+}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{ Logical Timestamp }
+  \begin{figure}[h]
+  \centering
+  \includegraphics[height=0.4\linewidth]{lamport.png}
+  \includegraphics[width=0.5\linewidth]{lamport_timestamp.png}
+  \end{figure}
+  \note {
+  The statement "message transmission delay is not negligible" in the definition of a distributed system hides an assumption that the delay in a distributed system is random and unpredictable. Therefore, given three peers A, B, and C, without any external information, C cannot independently determine the order of messages from A and B.
+
+  The Lamport Timestamp provides a method for measuring time based on the ordering of messages, rather than relying on real-world time. This concept is extremely valuable, especially in complex distributed networks where message sequencing is essential. In the realm of cryptography, the sequencer holds paramount importance, particularly in Layer 2 implementations. We will delve deeper into this topic in future discussions.
+}
+\end{frame}
+
+\begin{frame}
+\frametitle{ Definition: What is distributed network }
+  \begin{figure}[h]
+  \centering
+  \includegraphics[width=0.7\linewidth]{lopologic.png}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{ Is Internet distributed? }
+\begin{columns}[T] % contents are top vertically aligned
+\begin{column}{5cm} % each column can also be its own environment
+  \begin{minipage}[c][0.5 \textheight][c]{\linewidth}
+    \textbf{\Large The system is failing.\cite{bernerslee2017}}
+    \begin{flushright}
+     --- Tim Berners-Lee, 2017
+    \end{flushright}
+  \end{minipage}
+\end{column}
+\begin{column}{5cm} % alternative top-align that's better for graphics
+  \begin{figure}[h]
+  \centering
+  \includegraphics[width=0.7\linewidth]{hourglass.png}
+  \end{figure}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{ Intoducing to the dWeb }
+  \begin{figure}[h]
+  \centering
+  \includegraphics[width=0.7\linewidth]{lopologic.png}\cite{mozilla2018}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{ Implementation of dWeb }
+  \begin{itemize}
+  \item { Tor Project }
+  - Onion Relay, Hidden services
+  \item { GUNnet }
+  - DHT Based, structure p2p
+  \item { Rings Network }
+  - DHT and WASM, structure p2p
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Thanks}
+  Repository of this Slides:\newline \\
+  \centering
+  \color{black}{\fcolorbox{white}{white}{
+  \qrcode[link, height=1in]{https://github.com/ringsnetwork/rings-101}
+  }}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Reference}
+  \bibliographystyle{plain}
+  \bibliography{slide}
+\end{frame}
+
+\end{document}
