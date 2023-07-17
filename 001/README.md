@@ -6,4 +6,5 @@
 001 - What is distributed system
 ===============
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/5OXN2j2KJaI" frameborder="0" allowfullscreen></iframe>
+
+[![What is distributed system](https://youtu.be/5OXN2j2KJaI/0.jpg)](https://youtu.be/5OXN2j2KJaI)
